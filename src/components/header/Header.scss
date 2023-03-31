@@ -1,0 +1,32 @@
+@use "../../global.scss";
+
+.lighter {
+    height: 10px;
+    background-image: linear-gradient(to bottom, global.$primary -40%, white 100%);
+    box-shadow: none !important;
+}
+
+.navbar {
+    background-color: global.$primary !important;
+    box-shadow: 0px 50px linear-gradient(to bottom, #00172d, red) !important;
+
+    a {
+        transition: color 0.6s !important;
+    }
+
+    a:hover {
+        color: orange !important;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    * {
+        color: global.$text-color;
+    }
+}
