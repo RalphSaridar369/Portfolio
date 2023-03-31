@@ -7,7 +7,7 @@ import { useState } from 'react';
 function Contact() {
 
     const [mailData,setMailData] = useState({
-        email:"",
+        subject:"",
         message:"",
     })
 
@@ -18,17 +18,27 @@ function Contact() {
         })    
     }
 
+    const onEmailSend = (e) =>{
+        if(!mailData.subject || !mailData.message){
+            alert("Please fill the input fields before sending an email")
+        }
+        else{
+            window.location.href = `mailto:ralphsaridar@hotmail.com?subject=${mailData.subject}&body=${mailData.message}`;
+        }
+        e.preventDefault();
+    }
+
   return (
     <Form className='form-container'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label><h4>Contact Us</h4></Form.Label>
-        <Form.Control type="email" placeholder="Email" value={mailData.email} onChange={(e)=>onChange('email',e.currentTarget.value)}/>
+        <Form.Control type="text" placeholder="Subject" value={mailData.subject} onChange={(e)=>onChange('subject',e.currentTarget.value)}/>
       </Form.Group>
 
       <InputGroup className="mb-3">
         <Form.Control as="textarea" aria-label="With textarea" placeholder='Message' value={mailData.message} onChange={(e)=>onChange('message',e.currentTarget.value)}/>
       </InputGroup>
-      <Button type="submit">
+      <Button type="submit" onClick={(e)=>onEmailSend(e)}>
         Submit
       </Button>
     </Form>
