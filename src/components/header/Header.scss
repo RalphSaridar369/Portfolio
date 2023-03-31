@@ -16,11 +16,13 @@
     }
 
     a {
-        transition: color 0.6s !important;
+        transition: color 0.6s, transform 0.6s !important;
+        margin-right: 50px;
     }
 
     a:hover {
         color: global.$secondary !important;
+        transform: scale(1.04);
     }
 
     .logo {
