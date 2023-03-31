@@ -10,6 +10,11 @@
     background-color: global.$primary !important;
     box-shadow: 0px 50px linear-gradient(to bottom, #00172d, red) !important;
 
+    #basic-navbar-nav {
+        margin-left: 20px;
+        align-items: center;
+    }
+
     a {
         transition: color 0.6s !important;
     }
