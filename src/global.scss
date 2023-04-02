@@ -1,9 +1,11 @@
 $primary: #00172d;
 $secondary: #e47736;
 $text-color: #ffffff;
+$mobile-width: 425px;
 
 body {
     background-color: $primary;
+    color: white;
 }
 
 .body-wrapper {

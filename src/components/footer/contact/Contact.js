@@ -4,7 +4,7 @@ import './Contact.scss'
 import { InputGroup } from 'react-bootstrap';
 import { useState } from 'react';
 
-function Contact() {
+function Contact(props) {
 
     const [mailData,setMailData] = useState({
         subject:"",
@@ -29,9 +29,9 @@ function Contact() {
     }
 
   return (
-    <Form className='form-container'>
+    <Form className={`form-container ${props.className}`}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label><h4>Contact Us</h4></Form.Label>
+        <h5>Send us an email</h5>
         <Form.Control type="text" placeholder="Subject" value={mailData.subject} onChange={(e)=>onChange('subject',e.currentTarget.value)}/>
       </Form.Group>
 

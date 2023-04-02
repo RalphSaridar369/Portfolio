@@ -1,4 +1,4 @@
-import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 
 function App() {
@@ -6,8 +6,8 @@ function App() {
     <div className="App">
       <Header />
         <div className="body-wrapper">
-          <Contact />
         </div>
+          <Footer />
     </div>
   );
 }

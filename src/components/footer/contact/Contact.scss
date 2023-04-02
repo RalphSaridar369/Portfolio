@@ -1,0 +1,8 @@
+@use "../../../global.scss";
+.form-container {
+    max-width: 35%;
+
+    @media (max-width: global.$mobile-width) {
+        max-width: 90%;
+    }
+}
