@@ -9,9 +9,9 @@ const Footer = () => {
         <div className='footer-container'>
             <div className='footer-left'>
                 <h5>Contact Us</h5><br/>
-                <p>Ralph Saridar</p>
-                <p>Mohammad Halawi</p>
-                <p>Ali Hamdan</p>
+                <p><a href="https://www.linkedin.com/in/ralph-saridar-7278021b3/" target="blank_">Ralph Saridar</a></p>
+                {/* <p>Mohammad Halawi</p> */}
+                <p><a href="https://www.linkedin.com/in/ali-hamdan-24855b252/" target='blank_'>Ali Hamdan</a></p>
             </div>
             <Contact className="footer-right"/>
         </div>

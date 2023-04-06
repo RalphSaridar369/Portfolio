@@ -1,7 +1,42 @@
 $primary: #00172d;
 $secondary: #e47736;
 $text-color: #ffffff;
+
+$fs-lg: 20px;
+$fs-md: 16px;
+$fs-sm: 14px;
+
+$laptop-width: 1024px;
+$tablet-width: 768px;
 $mobile-width: 425px;
+
+.primary-color {
+    color: $primary;
+}
+
+.secondary-color {
+    color: $secondary;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $secondary;
+}
 
 body {
     background-color: $primary;
@@ -22,6 +57,7 @@ button {
     font-weight: 300 !important;
 }
 
+h2,
 h3,
 h4,
 h5 {

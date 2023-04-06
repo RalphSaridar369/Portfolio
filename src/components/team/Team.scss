@@ -1,0 +1,34 @@
+@use "../../global.scss";
+
+.team-container {
+    margin: 50px 0px;
+    .team-card {
+        max-width: 400px !important;
+
+        .card-title {
+            font-size: 26px;
+            font-weight: 500;
+        }
+
+        .card-subtitle {
+            font-size: global.$fs-md;
+            font-style: italic;
+        }
+
+        .card-skill-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+
+            .card-skill-icon {
+                margin-top: 10px;
+                width: 30px;
+                border-radius: 5px;
+            }
+
+            .icon-name {
+                margin-left: 20px;
+            }
+        }
+    }
+}

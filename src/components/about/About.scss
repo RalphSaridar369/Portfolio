@@ -1,0 +1,30 @@
+@use "../../global.scss";
+
+.about-container {
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+    @media (max-width: global.$laptop-width) {
+        width: 80%;
+        p {
+            font-size: global.$fs-lg;
+        }
+    }
+
+    @media (max-width: global.$tablet-width) {
+        width: 100%;
+        p {
+            font-size: global.$fs-md;
+        }
+    }
+
+    @media (max-width: global.$mobile-width) {
+        width: 100%;
+        p {
+            font-size: global.$fs-sm;
+        }
+    }
+}
