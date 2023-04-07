@@ -10,6 +10,16 @@ $laptop-width: 1024px;
 $tablet-width: 768px;
 $mobile-width: 425px;
 
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: $secondary;
+    transform-origin: 0%;
+    z-index: 100;
+}
 .primary-color {
     color: $primary;
 }
