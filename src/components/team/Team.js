@@ -5,67 +5,9 @@ import Accordion from "react-bootstrap/Accordion";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
-import ralph from "../../images/ralph.jpg";
-import ali from "../../images/ali.jpg";
+import { team_data } from "./Static";
 
 const Team = () => {
-  const team_data = [
-    {
-      name: "Ralph Saridar",
-      img: ralph,
-      position: "Full-Stack Developer",
-      skills: [
-        {
-          name: "JavaScript",
-          img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        },
-        {
-          name: "TypeScript",
-          img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-        },
-        {
-          name: "React.js",
-          img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        },
-        {
-          name: "React-Native",
-          img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        },
-        {
-          name: "Node.js",
-          img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-        },
-        {
-          name: "PHP",
-          img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-        },
-        {
-          name: "Laravel",
-          img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
-        },
-      ],
-    },
-    {
-      name: "Ali Hamdan",
-      img: ali,
-      position: "Front-End Developer",
-      skills: [
-        {
-          name: "JavaScript",
-          img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        },
-        {
-          name: "React.js",
-          img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        },
-        {
-          name: "PHP",
-          img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-        },
-      ],
-    },
-  ];
-
   return (
     <div className="team-container">
       <h2>Team</h2>
@@ -78,8 +20,8 @@ const Team = () => {
               <Card.Img variant="top" src={person.img} />
 
               {/* <Accordion>
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>Skills</Accordion.Header> */}
+                        <Accordion.Item eventKey="0">
+                          <Accordion.Header>Skills</Accordion.Header> */}
               <Card.Body>
                 <Card.Title className="primary-color card-title">
                   {person.name}
@@ -109,7 +51,7 @@ const Team = () => {
                 </div>
               </Card.Body>
               {/* </Accordion.Item>
-              </Accordion> */}
+                      </Accordion> */}
             </Card>
           </Col>
         ))}
