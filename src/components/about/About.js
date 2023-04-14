@@ -10,8 +10,8 @@ const About = () => {
       <p>{about_us_text}</p>
 
       <h4>Our Approach</h4>
-      {our_approach_texts.map((text) => (
-        <p>{text}</p>
+      {our_approach_texts.map((text, index) => (
+        <p key={index}>{text}</p>
       ))}
     </div>
   );
