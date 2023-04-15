@@ -15,45 +15,53 @@ const Team = () => {
 
       <Row xs={12} md={2}>
         {team_data.map((person, idx) => (
-          <Col key={idx}>
-            <Card className="team-card">
-              <Card.Img variant="top" src={person.img} />
+          <div key={idx}>
+            <Col>
+              <Card className="team-card">
+                <Card.Img
+                  className="team-card-img"
+                  variant="top"
+                  src={person.img}
+                />
 
-              {/* <Accordion>
+                {/* <Accordion>
                         <Accordion.Item eventKey="0">
                           <Accordion.Header>Skills</Accordion.Header> */}
-              <Card.Body>
-                <Card.Title className="primary-color card-title">
-                  {person.name}
-                </Card.Title>
-                <Card.Title className="secondary-color card-subtitle">
-                  {person.position}
-                </Card.Title>
+                <div className="team-card-info">
+                  <Card.Body>
+                    <Card.Title className="primary-color card-title">
+                      {person.name}
+                    </Card.Title>
+                    <Card.Title className="secondary-color card-subtitle">
+                      {person.position}
+                    </Card.Title>
 
-                <div className="card-skill-container">
-                  {person.skills.map((skill, index) => {
-                    return (
-                      <div
-                        key={index}
-                        className="d-flex flex-row align-items-center"
-                      >
-                        <img
-                          src={skill.img}
-                          className="card-skill-icon"
-                          alt="icon"
-                        />
-                        <span className="primary-color icon-name">
-                          {skill.name}
-                        </span>
-                      </div>
-                    );
-                  })}
+                    <div className="card-skill-container">
+                      {person.skills.map((skill, index) => {
+                        return (
+                          <div
+                            key={index}
+                            className="d-flex flex-row align-items-center"
+                          >
+                            <img
+                              src={skill.img}
+                              className="card-skill-icon"
+                              alt="icon"
+                            />
+                            <span className="primary-color icon-name">
+                              {skill.name}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </Card.Body>
                 </div>
-              </Card.Body>
-              {/* </Accordion.Item>
+                {/* </Accordion.Item>
                       </Accordion> */}
-            </Card>
-          </Col>
+              </Card>
+            </Col>
+          </div>
         ))}
       </Row>
     </div>

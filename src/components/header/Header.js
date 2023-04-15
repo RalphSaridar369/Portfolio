@@ -5,11 +5,25 @@ import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../images/logo2.png";
 import "./Header.scss";
 import { links } from "./static";
+import { useState } from "react";
 
 function Header() {
+  const [backgroundColor, setBackgroundColor] = useState(false);
+  const changeBackgroundColor = () => {
+    setBackgroundColor(window.scrollY >= 300 ? true : false);
+  };
+
+  window.addEventListener("scroll", changeBackgroundColor);
+
   return (
     <>
-      <Navbar bg="light" expand="lg" className="navbar">
+      <Navbar
+        bg="light"
+        expand="lg"
+        className={`navbar ${
+          backgroundColor ? "secondary" : "primary"
+        }-navbar-color`}
+      >
         <Container>
           <Navbar.Brand href="#home">
             <img src={Logo} className="logo" alt="TechFanatics" href="/" />

@@ -5,6 +5,10 @@
     .team-card {
         max-width: 400px !important;
 
+        .team-card-img:hover {
+            animation: animate-disappear 1s ease-in;
+        }
+
         .card-title {
             font-size: 26px;
             font-weight: 500;
@@ -30,5 +34,18 @@
                 margin-left: 20px;
             }
         }
+    }
+}
+
+@keyframes animate-disappear {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 0%;
+        display: none;
     }
 }

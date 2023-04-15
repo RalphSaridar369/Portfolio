@@ -6,8 +6,25 @@
     box-shadow: none !important;
 }
 
-.navbar {
+.primary-navbar-color {
     background-color: global.$primary !important;
+}
+
+.secondary-navbar-color {
+    background-color: #ffffff !important;
+    a {
+        color: global.$primary !important;
+    }
+
+    .navbar-toggler-icon {
+        background: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0' y='0'") !important;
+    }
+}
+
+.navbar {
+    position: fixed;
+    width: 100vw;
+    z-index: 99;
     box-shadow: 0px 50px linear-gradient(to bottom, #00172d, red) !important;
 
     #basic-navbar-nav {
