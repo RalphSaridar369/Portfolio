@@ -4,7 +4,7 @@ import { about_us_text, our_approach_texts } from "./Static";
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="about-container" id="#about">
       <h2>Welcome to TechFanatics!</h2>
 
       <p>{about_us_text}</p>

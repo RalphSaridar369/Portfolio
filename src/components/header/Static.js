@@ -1,18 +1,18 @@
 export const links = [
   {
     text: "About Us",
-    link: "#about",
+    link: "about",
   },
   {
     text: "Team",
-    link: "#team",
+    link: "team",
   },
   {
     text: "Services",
-    link: "#services",
+    link: "services",
   },
   {
     text: "Contact",
-    link: "#contact",
+    link: "contact",
   },
 ];

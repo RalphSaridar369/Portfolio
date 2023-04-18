@@ -6,7 +6,7 @@ import { footer_links } from "./Static";
 const Footer = () => {
   return (
     <>
-      <div className="lighter"></div>
+      <div className="lighter" id="#contact"></div>
       <div className="footer-container">
         <div className="footer-left">
           <h5>Contact Us</h5>

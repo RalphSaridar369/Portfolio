@@ -5,15 +5,20 @@ import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../images/logo2.png";
 import "./Header.scss";
 import { links } from "./static";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
-function Header() {
+function Header({ scrollTo }) {
   const [backgroundColor, setBackgroundColor] = useState(false);
   const changeBackgroundColor = () => {
     setBackgroundColor(window.scrollY >= 300 ? true : false);
   };
 
   window.addEventListener("scroll", changeBackgroundColor);
+
+  const aboutRef = useRef(null);
+  const teamRef = useRef(null);
+  const servicesRef = useRef(null);
+  const contactRef = useRef(null);
 
   return (
     <>
@@ -32,7 +37,11 @@ function Header() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               {links.map((link, index) => (
-                <Nav.Link key={index} href={link.href}>
+                <Nav.Link
+                  key={index}
+                  href={"#" + link.link}
+                  onClick={(e) => scrollTo(e)}
+                >
                   {link.text}
                 </Nav.Link>
               ))}
