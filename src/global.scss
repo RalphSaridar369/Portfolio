@@ -10,6 +10,10 @@ $laptop-width: 1024px;
 $tablet-width: 768px;
 $mobile-width: 425px;
 
+// * {
+//     overflow-x: hidden;
+// }
+
 .progress-bar {
     position: fixed;
     top: 0;

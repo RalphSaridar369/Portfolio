@@ -3,7 +3,6 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Team from "./components/team/Team";
 import { motion, useScroll } from "framer-motion";
-import "./index.css";
 import { useRef } from "react";
 
 function App() {
@@ -13,9 +12,11 @@ function App() {
   const contactRef = useRef(null);
 
   const { scrollYProgress } = useScroll();
+
   const scrollTo = (event) => {
     event.preventDefault();
     const id = event.target.getAttribute("href");
+
     switch (id) {
       case "#team":
         teamRef.current.scrollIntoView({ behavior: "smooth" });
