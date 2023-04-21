@@ -10,10 +10,11 @@
         width: 40%;
     }
 
-    @media (max-width: global.$tablet-width) {
-        width: 100vw !important;
-        flex-direction: column-reverse;
+    @media (max-width: 1400px) {
+        // width: 100vw !important;
+        flex-direction: column;
 
+        margin-bottom: 100px;
         .welcome-container {
             width: 80% !important;
         }

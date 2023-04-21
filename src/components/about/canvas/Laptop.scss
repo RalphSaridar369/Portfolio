@@ -1,7 +1,12 @@
 @use "../../../global.scss";
 
 .canvas-container {
-    border: 1px solid black;
     height: 100vh !important;
     width: 60vw !important;
+
+    @media (max-width: 1400px) {
+        height: 80vh !important;
+        width: 80vw !important;
+        border: 1px solid black;
+    }
 }

@@ -52,7 +52,7 @@ function App() {
             <Team />
           </div>
         </div>
-        <Contact />
+        {/* <Contact /> */}
         <div ref={contactRef}>
           <Footer />
         </div>

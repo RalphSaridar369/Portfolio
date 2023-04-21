@@ -20,8 +20,8 @@ const Laptop = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={laptop.scene}
-        scale={isMobile ? 2 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        scale={isMobile ? 0.95 : 0.75}
+        position={isMobile ? [0, -3.25, -1.5] : [0, -3.25, -1.5]}
         rotation={[0.1, 6.5, 0]}
       />
     </mesh>
@@ -33,7 +33,7 @@ const LaptopCanvas = () => {
 
   useEffect(() => {
     // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 1400px)");
 
     // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
@@ -57,8 +57,12 @@ const LaptopCanvas = () => {
       <Canvas
         frameloop="demand"
         shadows
-        dpr={[1, 4]}
-        camera={{ position: [20, 3, 6], fov: 100 }}
+        dpr={[1, 2]}
+        camera={{
+          position: [20, 3, 6],
+          fov: 100,
+          zoom: isMobile ? 1.000000001 : 1,
+        }}
         gl={{ preserveDrawingBuffer: true }}
       >
         <OrbitControls

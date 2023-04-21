@@ -29,7 +29,7 @@ function Contact(props) {
 
   return (
     <div className="contact-container">
-      <MailCanvas />
+      {/* <MailCanvas /> */}
       <Form className={`form-container ${props.className}`}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <h5>Send us an email</h5>
