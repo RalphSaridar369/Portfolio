@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../images/logo2.png";
 import "./Header.scss";
 import { links } from "./static";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 function Header({ scrollTo }) {
   const [backgroundColor, setBackgroundColor] = useState(false);
@@ -14,11 +14,6 @@ function Header({ scrollTo }) {
   };
 
   window.addEventListener("scroll", changeBackgroundColor);
-
-  const aboutRef = useRef(null);
-  const teamRef = useRef(null);
-  const servicesRef = useRef(null);
-  const contactRef = useRef(null);
 
   return (
     <>
