@@ -9,4 +9,21 @@
     .welcome-container {
         width: 40%;
     }
+
+    @media (max-width: global.$tablet-width) {
+        width: 100vw !important;
+        flex-direction: column-reverse;
+
+        .welcome-container {
+            width: 80% !important;
+        }
+    }
+
+    @media (max-width: global.$mobile-width) {
+        width: 30vw !important;
+
+        .welcome-container {
+            width: 80% !important;
+        }
+    }
 }

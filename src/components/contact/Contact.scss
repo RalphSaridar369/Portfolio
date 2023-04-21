@@ -1,0 +1,12 @@
+@use "../../global.scss";
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw !important;
+
+    .form-container {
+        @media (max-width: global.$mobile-width) {
+            max-width: 90%;
+        }
+    }
+}
