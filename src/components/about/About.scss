@@ -1,7 +1,7 @@
 @use "../../global.scss";
 
 .about-container {
-    margin: 50px 0px;
+    @include global.main-margin;
     display: flex;
     flex-direction: column;
     justify-content: center;

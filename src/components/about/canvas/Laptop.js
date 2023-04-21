@@ -60,8 +60,8 @@ const LaptopCanvas = () => {
         dpr={[1, 2]}
         camera={{
           position: [20, 3, 6],
-          fov: 100,
-          zoom: isMobile ? 1.000000001 : 1,
+          fov: isMobile ? 100 : 80,
+          zoom: isMobile ? 0.8 : 1,
         }}
         gl={{ preserveDrawingBuffer: true }}
       >

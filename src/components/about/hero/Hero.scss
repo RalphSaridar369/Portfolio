@@ -13,6 +13,7 @@
     @media (max-width: 1400px) {
         // width: 100vw !important;
         flex-direction: column;
+        height: 80vh;
 
         margin-bottom: 100px;
         .welcome-container {
@@ -21,8 +22,6 @@
     }
 
     @media (max-width: global.$mobile-width) {
-        width: 30vw !important;
-
         .welcome-container {
             width: 80% !important;
         }
