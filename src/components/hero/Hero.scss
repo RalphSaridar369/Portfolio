@@ -1,13 +1,18 @@
-@use "../../../global.scss";
+@use "../../global.scss";
 
 .hero-container {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    width: 80vw !important;
+    width: 100% !important;
+
+    .hero-description-text {
+        color: global.$text-color;
+    }
 
     .welcome-container {
         width: 40%;
+        margin-top: 10rem;
     }
 
     @media (max-width: 1400px) {
@@ -18,6 +23,16 @@
         margin-bottom: 100px;
         .welcome-container {
             width: 80% !important;
+        }
+    }
+
+    @media (max-width: global.$laptop-width) {
+        .hero-description-text {
+            font-size: global.$fs-md !important;
+        }
+
+        .welcome-container {
+            margin-top: 2rem !important;
         }
     }
 
