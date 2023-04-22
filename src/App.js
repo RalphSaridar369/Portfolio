@@ -6,6 +6,7 @@ import Team from "./components/team/Team";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Hero from "./components/hero/Hero";
+import Services from "./components/services/Services";
 
 function App() {
   const heroRef = useRef(null);
@@ -24,11 +25,11 @@ function App() {
       case "#home":
         heroRef.current.scrollIntoView({ behavior: "smooth" });
         break;
-      case "#team":
-        teamRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
       case "#about":
         aboutRef.current.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "#team":
+        teamRef.current.scrollIntoView({ behavior: "smooth" });
         break;
       case "#services":
         servicesRef.current.scrollIntoView({ behavior: "smooth" });
@@ -55,6 +56,9 @@ function App() {
           </div>
           <div ref={aboutRef}>
             <About />
+          </div>
+          <div ref={servicesRef}>
+            <Services />
           </div>
           <div ref={teamRef}>
             <Team />
