@@ -55,4 +55,23 @@ export const team_data = [
       },
     ],
   },
+  {
+    name: "Amani Ayach",
+    img: ali,
+    position: "Multimedia & Software Engineer",
+    skills: [
+      {
+        name: "JavaScript",
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      },
+      {
+        name: "React.js",
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+      {
+        name: "PHP",
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+      },
+    ],
+  },
 ];
