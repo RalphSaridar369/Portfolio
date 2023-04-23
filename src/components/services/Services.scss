@@ -6,6 +6,10 @@
         height: 80vh !important;
         border-radius: 10px;
         margin-top: 30px;
+
+        @media (max-width: global.$tablet-width) {
+            display: none !important;
+        }
     }
 
     .services-card-container {
@@ -15,5 +19,14 @@
         justify-content: space-around !important;
         align-items: center;
         margin-bottom: 100px;
+
+        @media (max-width: global.$tablet-width) {
+            height: 100% !important;
+            margin-bottom: 0px !important;
+
+            flex-direction: column;
+            justify-content: center !important;
+            align-items: center !important;
+        }
     }
 }

@@ -4,6 +4,15 @@
     @include global.main-margin;
     .team-card-container {
         justify-content: space-around;
+
+        @media (max-width: global.$tablet-width) {
+            // align-self: center !important;
+            // justify-self: center !important;
+            // flex-direction: column !important;
+            // align-items: center !important;
+            // justify-content: center !important;
+            // border: 1px solid black;
+        }
     }
 }
 

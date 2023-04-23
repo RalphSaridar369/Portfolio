@@ -7,7 +7,7 @@ import Card from "./card/Card";
 const Services = () => {
   return (
     <div id="services" className="services">
-      <h4>Our Services</h4>
+      <h2>Our Services</h2>
       <img className="services-image" src={Our_Service} alt="our service bg" />
       <div className="services-card-container">
         {our_services.map((service, index) => (

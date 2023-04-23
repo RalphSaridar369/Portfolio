@@ -8,6 +8,11 @@
     border-radius: 20px;
     background-color: #fbfcf8;
 
+    padding: 20px 50px !important;
+
+    @media (max-width: global.$mobile-width) {
+        padding: 20px 20px !important;
+    }
     img {
         height: 50px;
         margin-bottom: 20px;
@@ -16,5 +21,38 @@
     .card-description {
         color: global.$primary;
         font-size: global.$fs-sm;
+    }
+
+    .pricing-container {
+        .pricing-title {
+            margin-bottom: 40px !important;
+        }
+        .pricing-detail {
+            color: global.$primary;
+            font-size: global.$fs-lg;
+        }
+
+        @media (max-width: global.$monitor-width) {
+            width: 270px !important;
+        }
+
+        @media (max-width: global.$laptop-width) {
+            width: 250px !important;
+        }
+    }
+
+    @media (max-width: global.$monitor-width) {
+        width: 270px !important;
+    }
+
+    @media (max-width: global.$laptop-width) {
+        width: 220px !important;
+    }
+
+    @media (max-width: global.$tablet-width) {
+        margin-bottom: 0px !important;
+        width: 100vw !important;
+        height: 100% !important;
+        border-radius: 0px !important;
     }
 }
