@@ -4,14 +4,19 @@
     @include global.main-margin;
     .team-card-container {
         justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+        @media (max-width: global.$laptop-width) {
+            height: 100% !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         @media (max-width: global.$tablet-width) {
-            // align-self: center !important;
-            // justify-self: center !important;
-            // flex-direction: column !important;
-            // align-items: center !important;
-            // justify-content: center !important;
-            // border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 }

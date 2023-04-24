@@ -13,7 +13,7 @@ const Team = () => {
       <h2>Team</h2>
       <br />
 
-      <Row xs={12} md={2} xl={4} className="team-card-container">
+      <div xs={12} md={2} xl={4} className="team-card-container">
         {team_data.map((person, idx) => (
           <div key={idx}>
             <Col>
@@ -21,7 +21,7 @@ const Team = () => {
             </Col>
           </div>
         ))}
-      </Row>
+      </div>
     </div>
   );
 };

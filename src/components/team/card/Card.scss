@@ -3,6 +3,25 @@
 .team-card {
     max-width: 300px !important;
     height: 400px;
+
+    @media (max-width: global.$laptop-width) {
+        max-width: 400px !important;
+        width: 400px !important;
+        height: 500px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: global.$tablet-width) {
+        max-width: 350px !important;
+        width: 350px !important;
+        height: 450px !important;
+    }
+
+    @media (max-width: global.$mobile-width) {
+        max-width: 300px !important;
+        width: 300px !important;
+        height: 400px !important;
+    }
     .card-title {
         font-size: 26px;
         font-weight: 500;
