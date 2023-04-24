@@ -1,12 +1,19 @@
 @use "../../global.scss";
-.contact-container {
-    display: flex;
-    flex-direction: row;
-    width: 100vw !important;
 
-    .form-container {
-        @media (max-width: global.$mobile-width) {
-            max-width: 90%;
+.contact-wrapper {
+    margin-top: 100px;
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        width: 100% !important;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        justify-content: space-around;
+
+        .form-container {
+            @media (max-width: global.$mobile-width) {
+                max-width: 90%;
+            }
         }
     }
 }

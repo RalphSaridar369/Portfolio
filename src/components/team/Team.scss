@@ -1,7 +1,7 @@
 @use "../../global.scss";
 
 .team-container {
-    @include global.main-margin;
+    margin-top: 150px !important;
     .team-card-container {
         justify-content: space-around;
         display: flex;

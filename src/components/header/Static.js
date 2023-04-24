@@ -4,12 +4,12 @@ export const links = [
     link: "about",
   },
   {
-    text: "Team",
-    link: "team",
-  },
-  {
     text: "Services",
     link: "services",
+  },
+  {
+    text: "Team",
+    link: "team",
   },
   {
     text: "Contact",

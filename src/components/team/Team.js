@@ -10,7 +10,7 @@ import CardTeam from "./card/Card";
 const Team = () => {
   return (
     <div className="team-container">
-      <h2>Team</h2>
+      <h2>The Team</h2>
       <br />
 
       <div xs={12} md={2} xl={4} className="team-card-container">

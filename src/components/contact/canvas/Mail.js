@@ -1,13 +1,14 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 import "./Mail.scss";
 
-const Mail = ({ isMobile }) => {
+const Mail = ({ isMobile, ref }) => {
   const mail = useGLTF("./3d/mail/scene.gltf");
 
   return (
-    <mesh>
+    <mesh ref={ref}>
       <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}
@@ -31,6 +32,7 @@ const Mail = ({ isMobile }) => {
 const MailCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
+  const objectRef = useRef();
   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 1400px)");
@@ -57,16 +59,18 @@ const MailCanvas = () => {
       <Canvas
         frameloop="demand"
         shadows
-        dpr={[1, 4]}
-        camera={{ position: [20, 3, 0], fov: 5 }}
+        dpr={[1, 10]}
         gl={{ preserveDrawingBuffer: true }}
+        camera={{ position: [0, 200, 0.001], fov: 4 }}
       >
         <OrbitControls
+          target={objectRef.current ? objectRef.current.position : [0, 0, 0]}
+          zoom={2}
           enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 4}
+          maxPolarAngle={Math.PI / 3}
+          minPolarAngle={Math.PI / 2}
         />
-        <Mail isMobile={isMobile} />
+        <Mail isMobile={isMobile} ref={objectRef} />
         <Preload all />
       </Canvas>
     </div>

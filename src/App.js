@@ -63,9 +63,11 @@ function App() {
           <div ref={teamRef}>
             <Team />
           </div>
+          <div ref={contactRef}>
+            <Contact />
+          </div>
         </div>
-        {/* <Contact /> */}
-        <div ref={contactRef}>
+        <div>
           <Footer />
         </div>
       </div>

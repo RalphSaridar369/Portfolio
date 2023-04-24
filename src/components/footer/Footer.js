@@ -6,10 +6,9 @@ import { footer_links } from "./Static";
 const Footer = () => {
   return (
     <>
-      <div className="lighter" id="#contact"></div>
+      <div className="lighter"></div>
       <div className="footer-container">
         <div className="footer-left">
-          <h5>Contact Us</h5>
           <br />
           {footer_links.map((link, index) => (
             <p key={index}>
@@ -19,7 +18,7 @@ const Footer = () => {
             </p>
           ))}
         </div>
-        <Contact className="footer-right" />
+        {/* <Contact className="footer-right" /> */}
       </div>
     </>
   );

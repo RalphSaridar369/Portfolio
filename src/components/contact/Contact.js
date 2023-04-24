@@ -28,32 +28,35 @@ function Contact(props) {
   };
 
   return (
-    <div className="contact-container">
-      {/* <MailCanvas /> */}
-      <Form className={`form-container ${props.className}`}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <h5>Send us an email</h5>
-          <Form.Control
-            type="text"
-            placeholder="Subject"
-            value={mailData.subject}
-            onChange={(e) => onChange("subject", e.currentTarget.value)}
-          />
-        </Form.Group>
+    <div id="#contact" className="contact-wrapper">
+      <h3>Contact Us</h3>
+      <div className="contact-container">
+        <Form className={`form-container ${props.className}`}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <h5>Send us an email</h5>
+            <Form.Control
+              type="text"
+              placeholder="Subject"
+              value={mailData.subject}
+              onChange={(e) => onChange("subject", e.currentTarget.value)}
+            />
+          </Form.Group>
 
-        <InputGroup className="mb-3">
-          <Form.Control
-            as="textarea"
-            aria-label="With textarea"
-            placeholder="Message"
-            value={mailData.message}
-            onChange={(e) => onChange("message", e.currentTarget.value)}
-          />
-        </InputGroup>
-        <Button type="submit" onClick={(e) => onEmailSend(e)}>
-          Submit
-        </Button>
-      </Form>
+          <InputGroup className="mb-3">
+            <Form.Control
+              as="textarea"
+              aria-label="With textarea"
+              placeholder="Message"
+              value={mailData.message}
+              onChange={(e) => onChange("message", e.currentTarget.value)}
+            />
+          </InputGroup>
+          <Button type="submit" onClick={(e) => onEmailSend(e)}>
+            Submit
+          </Button>
+        </Form>
+        <MailCanvas />
+      </div>
     </div>
   );
 }

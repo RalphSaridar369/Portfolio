@@ -1,6 +1,9 @@
 @use "../../../global.scss";
 
-.canvas-container {
-    // height: 100vh !important;
-    // width: 100vh !important;
+.mail-canvas {
+    height: 60vh !important;
+    width: 100vh !important;
+    border: 1px solid red;
+    align-items: center;
+    align-self: center;
 }

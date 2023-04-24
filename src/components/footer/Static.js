@@ -7,4 +7,8 @@ export const footer_links = [
     text: "Ali Hamdan",
     link: "https://www.linkedin.com/in/ali-hamdan-24855b252/",
   },
+  {
+    text: "Amani Ayach",
+    link: "https://www.linkedin.com/in/amani-a-225b08162/",
+  },
 ];
