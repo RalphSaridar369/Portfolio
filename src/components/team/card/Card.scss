@@ -1,7 +1,7 @@
 @use "../../../global.scss";
 
 .team-card {
-    max-width: 300px !important;
+    width: 300px !important;
     height: 400px;
 
     @media (max-width: global.$laptop-width) {

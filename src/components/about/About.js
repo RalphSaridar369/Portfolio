@@ -6,6 +6,11 @@ const About = () => {
   return (
     <div className="about-container" id="about">
       <h4>Our Approach</h4>
+      <div className="shapes-container">
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div className="shape"></div>
+      </div>
       {our_approach_texts.map((text, index) => (
         <p key={index}>{text}</p>
       ))}
