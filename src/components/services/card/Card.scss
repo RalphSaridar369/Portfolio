@@ -28,24 +28,16 @@
         }
         .pricing-detail {
             color: global.$primary;
-            font-size: global.$fs-lg;
-        }
-
-        @media (max-width: global.$monitor-width) {
-            width: 270px !important;
+            font-size: global.$fs-md;
         }
 
         @media (max-width: global.$laptop-width) {
-            width: 250px !important;
+            width: 270px !important;
         }
     }
 
-    @media (max-width: global.$monitor-width) {
-        width: 270px !important;
-    }
-
     @media (max-width: global.$laptop-width) {
-        width: 220px !important;
+        width: 270px !important;
     }
 
     @media (max-width: global.$tablet-width) {
