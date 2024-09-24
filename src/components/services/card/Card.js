@@ -4,19 +4,19 @@ import "./Card.scss";
 const Card = (props) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleIsHovered = (value) => {
-    setIsHovered(value);
-  };
+  // const handleIsHovered = (value) => {
+  //   setIsHovered(value);
+  // };
 
-  const handleOnClick = () => {
-    setIsHovered(!isHovered);
-  };
+  // const handleOnClick = () => {
+  //   setIsHovered(!isHovered);
+  // };
   return (
     <div
       className="service-card"
-      onMouseEnter={() => handleIsHovered(true)}
-      onMouseLeave={() => handleIsHovered(false)}
-      onClick={handleOnClick}
+      // onMouseEnter={() => handleIsHovered(true)}
+      // onMouseLeave={() => handleIsHovered(false)}
+      // onClick={handleOnClick}
     >
       <div className={`opacity-${isHovered ? "0" : "1"}-transition`}>
         <img src={props.icon} alt="icon" />

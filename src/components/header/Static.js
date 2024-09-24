@@ -1,6 +1,6 @@
 export const links = [
   {
-    text: "About Us",
+    text: "About",
     link: "about",
   },
   {
@@ -8,8 +8,8 @@ export const links = [
     link: "services",
   },
   {
-    text: "Team",
-    link: "team",
+    text: "Skills",
+    link: "skills",
   },
   {
     text: "Contact",

@@ -1,17 +1,16 @@
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
-import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import Team from "./components/team/Team";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Hero from "./components/hero/Hero";
 import Services from "./components/services/Services";
+import Tech from "./components/technologies/Technologies";
 
 function App() {
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
-  const teamRef = useRef(null);
+  const skillsRef = useRef(null);
   const servicesRef = useRef(null);
   const contactRef = useRef(null);
 
@@ -28,8 +27,8 @@ function App() {
       case "#about":
         aboutRef.current.scrollIntoView({ behavior: "smooth" });
         break;
-      case "#team":
-        teamRef.current.scrollIntoView({ behavior: "smooth" });
+      case "#skills":
+        skillsRef.current.scrollIntoView({ behavior: "smooth" });
         break;
       case "#services":
         servicesRef.current.scrollIntoView({ behavior: "smooth" });
@@ -60,15 +59,12 @@ function App() {
           <div ref={servicesRef}>
             <Services />
           </div>
-          <div ref={teamRef}>
-            <Team />
+          <div ref={skillsRef}>
+            <Tech />
           </div>
           <div ref={contactRef}>
             <Contact />
           </div>
-        </div>
-        <div>
-          <Footer />
         </div>
       </div>
     </>

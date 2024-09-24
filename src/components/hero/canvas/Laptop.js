@@ -1,10 +1,19 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import "./Laptop.scss";
 
 const Laptop = ({ scale_state, state_position }) => {
   const laptop = useGLTF("./3d/laptop/scene.gltf");
+
+  useFrame(({ clock, scene }) => {
+    // Calculate rotation based on time (adjust the factor as needed)
+    const rotation = clock.getElapsedTime() * 0.2;
+
+    console.log("first: ", scene.getObjectByName("laptop").rotation);
+    // Update the rotation of the laptop
+    laptop.scene.rotation.y = rotation;
+  });
 
   return (
     <mesh>
@@ -19,10 +28,11 @@ const Laptop = ({ scale_state, state_position }) => {
       />
       <pointLight intensity={1} />
       <primitive
+        name="laptop"
+        rotation={[0.1, 6.5, 0]}
         object={laptop.scene}
         scale={scale_state}
         position={state_position}
-        rotation={[0.1, 6.5, 0]}
       />
     </mesh>
   );
