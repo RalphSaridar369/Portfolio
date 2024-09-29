@@ -1,12 +1,12 @@
-import starbucks from "../../images/company/starbucks.png";
-import tesla from "../../images/company/tesla.png";
+import Globalistic from "../../images/company/globalistic.png";
+import OptiDist from "../../images/company/optidist.png";
 
 export const experiences = [
   {
     title: "Front End Developer",
     company_name: "Globalistic",
-    icon: starbucks,
-    date: "March 2020 - April 2021",
+    icon: Globalistic,
+    date: "Sep 2021 - Mar 2022",
     points: [
       `Worked on 2 projects using React, React Native, Node.js, and Socket.io`,
       `Led a large-scale B2B marketplace independently using React Native`,
@@ -24,8 +24,8 @@ export const experiences = [
   {
     title: "Back End Developer",
     company_name: "OptiDist",
-    icon: tesla,
-    date: "Jan 2021 - Feb 2022",
+    icon: OptiDist,
+    date: "Jul 2022 - Aug 2024",
     points: [
       "Led the development of backend systems for a B2B Marketplace using Node.js, TypeORM, and PostgreSQL",
       "Utilized an open-source library to streamline development processes under the leadership role",

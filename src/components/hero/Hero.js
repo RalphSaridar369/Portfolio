@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="hero-container" id="home">
       <div className="welcome-container">
-        <h1>Welcome to TechFanatics!</h1>
+        <h1>Hello, Welcome to my portfolio!</h1>
         <h5 className="hero-description-text">{about_us_text}</h5>
       </div>
       <LaptopCanvas />

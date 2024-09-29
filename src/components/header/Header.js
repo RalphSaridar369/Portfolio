@@ -1,8 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-// import Logo from '../../images/logo.png'
-import Logo from "../../images/logo2.png";
+import Logo from "../../images/logo3.png";
 import "./Header.scss";
 import { links } from "./Static";
 import { useState } from "react";

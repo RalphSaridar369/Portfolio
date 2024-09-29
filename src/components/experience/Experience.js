@@ -53,9 +53,7 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <div>
-        <h2>Work Experience</h2>
-      </div>
+      <div></div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
