@@ -4,8 +4,8 @@ export const links = [
     link: "about",
   },
   {
-    text: "Services",
-    link: "services",
+    text: "Experience",
+    link: "experience",
   },
   {
     text: "Skills",

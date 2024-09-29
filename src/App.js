@@ -6,12 +6,13 @@ import { useRef } from "react";
 import Hero from "./components/hero/Hero";
 import Services from "./components/services/Services";
 import Tech from "./components/technologies/Technologies";
+import Experience from "./components/experience/Experience";
 
 function App() {
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
-  const servicesRef = useRef(null);
+  const experienceRef = useRef(null);
   const contactRef = useRef(null);
 
   const { scrollYProgress } = useScroll();
@@ -30,8 +31,8 @@ function App() {
       case "#skills":
         skillsRef.current.scrollIntoView({ behavior: "smooth" });
         break;
-      case "#services":
-        servicesRef.current.scrollIntoView({ behavior: "smooth" });
+      case "#experience":
+        experienceRef.current.scrollIntoView({ behavior: "smooth" });
         break;
       case "#contact":
         contactRef.current.scrollIntoView({ behavior: "smooth" });
@@ -56,7 +57,8 @@ function App() {
           <div ref={aboutRef}>
             <About />
           </div>
-          <div ref={servicesRef}>
+          <div ref={experienceRef}>
+            <Experience />
             <Services />
           </div>
           <div ref={skillsRef}>
