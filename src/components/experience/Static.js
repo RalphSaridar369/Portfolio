@@ -1,59 +1,42 @@
 import starbucks from "../../images/company/starbucks.png";
 import tesla from "../../images/company/tesla.png";
-import shopify from "../../images/company/shopify.png";
-import meta from "../../images/company/meta.png";
 
 export const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Front End Developer",
+    company_name: "Globalistic",
     icon: starbucks,
-    iconBg: "#383E56",
     date: "March 2020 - April 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      `Worked on 2 projects using React, React Native, Node.js, and Socket.io`,
+      `Led a large-scale B2B marketplace independently using React Native`,
+      `Optimized the frontend for performance and user experience`,
+      `Implemented permissions for sub users to control access levels`,
+      `Added user types on the frontend application for better user segmentation`,
+      `Utilized third-party services such as Twilio and SendGrid for communication functionalities`,
+      `Created reusable components in the application to enhance code maintainability and scalability`,
+      `Developed a website using Babylon.js and integrated sockets for real-time rendering of data upon component position
+      changes`,
+
+      `Optimized the application and resolved bugs to ensure smooth functionality`,
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Back End Developer",
+    company_name: "OptiDist",
     icon: tesla,
-    iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Led the development of backend systems for a B2B Marketplace using Node.js, TypeORM, and PostgreSQL",
+      "Utilized an open-source library to streamline development processes under the leadership role",
+      "Optimized endpoint functionalities for improved performance as a lead backend developer",
+      "Implemented Data Transfer Objects (DTOs) for enhanced data validation while leading the backend team",
+      "Collaborated closely with frontend teams to ensure seamless integration with the user interface under the lead backend developer role",
+      `Created comprehensive API documentation using Insomnia, ensuring clarity and ease of use for internal and external
+stakeholders`,
+
+      `Leveraged third-party services such as Postmark for email communication and Digital Ocean for hosting, contributing to
+the scalability and reliability of the platform.`,
     ],
   },
 ];

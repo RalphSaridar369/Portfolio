@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.scss";
-import { about_us_text, our_approach_texts } from "./Static";
+import { our_approach_texts } from "./Static";
 
 const About = () => {
   return (

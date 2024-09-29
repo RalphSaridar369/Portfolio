@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 // import Logo from '../../images/logo.png'
 import Logo from "../../images/logo2.png";
 import "./Header.scss";
-import { links } from "./static";
+import { links } from "./Static";
 import { useState } from "react";
 
 function Header({ scrollTo }) {

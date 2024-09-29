@@ -1,6 +1,6 @@
 import LaptopCanvas from "./canvas/Laptop";
 import "./Hero.scss";
-import { about_us_text, our_approach_texts } from "../about/Static";
+import { about_us_text } from "../about/Static";
 
 const Hero = () => {
   return (

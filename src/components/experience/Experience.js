@@ -17,7 +17,7 @@ const ExperienceCard = ({ experience }) => {
         color: "black",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: "#fff" }}
       icon={
         <div className="experience-icon-container">
           <img
@@ -29,13 +29,10 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <h4
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
+        <h4 className="text-[24px] font-bold">{experience.title}</h4>
+        <h5 className="text-[16px] font-semibold" style={{ margin: 0 }}>
           {experience.company_name}
-        </h4>
+        </h5>
         <p>{experience.date}</p>
       </div>
 

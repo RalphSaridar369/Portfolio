@@ -1,7 +1,6 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import * as THREE from "three";
 import "./Mail.scss";
 
 const Mail = ({ isMobile, ref }) => {
