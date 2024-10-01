@@ -7,7 +7,7 @@ import "./Technologies.scss";
 const Tech = () => {
   return (
     <>
-      <h2>Skills</h2>
+      <h2 style={{ marginTop: "20px" }}>Skills</h2>
       <div className="technologies_container" id="skills">
         <br />
         <div className="skills_container">

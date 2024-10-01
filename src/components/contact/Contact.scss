@@ -5,12 +5,19 @@
     .contact-container {
         display: flex;
         flex-direction: row;
+        height: 50vh;
         width: 100% !important;
         margin-top: 150px;
-        margin-bottom: 100px;
-        justify-content: space-around;
+        margin-bottom: 10px;
+        justify-content: space-between;
+
+        @media (max-width: global.$tablet-width) {
+            flex-direction: column;
+            gap: 40px !important;
+        }
 
         .form-container {
+            flex: 1;
             @media (max-width: global.$mobile-width) {
                 max-width: 90%;
             }

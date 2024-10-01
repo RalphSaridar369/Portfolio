@@ -1,75 +1,107 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import "./Mail.scss";
 
-const Mail = ({ isMobile, ref }) => {
+const Mail = ({ scale }) => {
   const mail = useGLTF("./3d/mail/scene.gltf");
 
   return (
-    <mesh ref={ref}>
-      <hemisphereLight intensity={0.15} groundColor="black" />
+    <mesh>
+      <hemisphereLight intensity={0.35} groundColor="gray" />
       <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
+        position={[-20, 30, 15]}
+        angle={0.3}
         penumbra={1}
-        intensity={1}
+        intensity={1.2}
         castShadow
         shadow-mapSize={1024}
       />
       <pointLight intensity={1} />
       <primitive
         object={mail.scene}
-        scale={isMobile ? 2 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[0.1, 6.5, 0]}
+        scale={scale}
+        position={[0, -10.25, -1.5]}
+        rotation={[0, 0, 0]}
       />
     </mesh>
   );
 };
 
 const MailCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [scale, setScale] = useState(20);
+  const [position, setPosition] = useState([10, 5, 35]);
+  const [fov, setFov] = useState(80);
+  const [zoom, setZoom] = useState(1);
 
-  const objectRef = useRef();
-  useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 1400px)");
+  // useEffect(() => {
+  //   const mediaQueries = {
+  //     greaterThanLaptop: window.matchMedia("(max-width: 1400px)"),
+  //     laptop: window.matchMedia("(max-width: 1024px)"),
+  //     tablet: window.matchMedia("(max-width: 768px)"),
+  //     mobile: window.matchMedia("(max-width: 425px)"),
+  //   };
 
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
+  //   const handleMediaQueryChange = () => {
+  //     if (mediaQueries.greaterThanLaptop.matches) {
+  //       setScale(20);
+  //       setPosition([10, 5, 35]);
+  //       setFov(120);
+  //       setZoom(0.8);
+  //     } else if (mediaQueries.laptop.matches) {
+  //       setScale(10);
+  //       setPosition([10, 5, 35]);
+  //       setFov(120);
+  //       setZoom(0.8);
+  //     } else if (mediaQueries.tablet.matches) {
+  //       setScale(70);
+  //       setPosition([10, 5, 35]);
+  //       setFov(80);
+  //       setZoom(10);
+  //     } else if (mediaQueries.mobile.matches) {
+  //       setScale(20);
+  //       setPosition([10, 5, 35]);
+  //       setFov(120);
+  //       setZoom(0.8);
+  //     }
+  //   };
 
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
+  //   // Add listeners for media query changes
+  //   Object.values(mediaQueries).forEach((query) => {
+  //     query.addEventListener("change", handleMediaQueryChange);
+  //   });
 
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+  //   // Initial check
+  //   handleMediaQueryChange();
 
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
+  //   // Cleanup listeners on unmount
+  //   return () => {
+  //     Object.values(mediaQueries).forEach((query) => {
+  //       query.removeEventListener("change", handleMediaQueryChange);
+  //     });
+  //   };
+  // }, []);
 
   return (
     <div className="mail-canvas">
       <Canvas
         frameloop="demand"
         shadows
-        dpr={[1, 10]}
+        dpr={[1, 2]}
         gl={{ preserveDrawingBuffer: true }}
-        camera={{ position: [0, 200, 0.001], fov: 4 }}
+        camera={{
+          position: position,
+          fov: fov,
+          zoom: zoom,
+        }}
       >
         <OrbitControls
-          target={objectRef.current ? objectRef.current.position : [0, 0, 0]}
-          zoom={2}
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 3}
-          minPolarAngle={Math.PI / 2}
+          autoRotate
+          enableZoom={true}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 3}
         />
-        <Mail isMobile={isMobile} ref={objectRef} />
+        <Mail scale={scale} />
         <Preload all />
       </Canvas>
     </div>

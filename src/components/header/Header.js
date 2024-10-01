@@ -39,6 +39,18 @@ function Header({ scrollTo }) {
                   {link.text}
                 </Nav.Link>
               ))}
+              <Nav.Link
+                href="https://github.com/RalphSaridar369"
+                alt="github_logo"
+              >
+                <img src={require("../../images/github.png")} />
+              </Nav.Link>
+              <Nav.Link
+                href="https://www.linkedin.com/in/ralph-saridar-7278021b3/"
+                alt="linkedin_logo"
+              >
+                <img src={require("../../images/linkedin.png")} />
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
