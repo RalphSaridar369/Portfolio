@@ -42,12 +42,14 @@ function Header({ scrollTo }) {
               <Nav.Link
                 href="https://github.com/RalphSaridar369"
                 alt="github_logo"
+                target="_blank"
               >
                 <img src={require("../../images/github.png")} />
               </Nav.Link>
               <Nav.Link
                 href="https://www.linkedin.com/in/ralph-saridar-7278021b3/"
                 alt="linkedin_logo"
+                target="_blank"
               >
                 <img src={require("../../images/linkedin.png")} />
               </Nav.Link>
