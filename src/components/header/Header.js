@@ -41,17 +41,21 @@ function Header({ scrollTo }) {
               ))}
               <Nav.Link
                 href="https://github.com/RalphSaridar369"
-                alt="github_logo"
                 target="_blank"
               >
-                <img src={require("../../images/github.png")} />
+                <img
+                  src={require("../../images/github.png")}
+                  alt="github_logo"
+                />
               </Nav.Link>
               <Nav.Link
                 href="https://www.linkedin.com/in/ralph-saridar-7278021b3/"
-                alt="linkedin_logo"
                 target="_blank"
               >
-                <img src={require("../../images/linkedin.png")} />
+                <img
+                  src={require("../../images/linkedin.png")}
+                  alt="linkedin_logo"
+                />
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
