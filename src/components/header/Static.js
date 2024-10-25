@@ -8,6 +8,10 @@ export const links = [
     link: "experience",
   },
   {
+    text: "Projects",
+    link: "projects",
+  },
+  {
     text: "Skills",
     link: "skills",
   },

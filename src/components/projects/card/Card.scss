@@ -1,0 +1,48 @@
+@use "../../../global.scss";
+
+.project-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    flex: 1;
+
+    flex: 1 1 300px; /* Set a minimum width for each card */
+    max-width: 100%; /* Adjust max width as needed */
+
+    color: black;
+
+    .project-card-image {
+        width: 100%;
+        border-radius: 20px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .project-card-title-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .project-card-links-container {
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+    .project-card-title {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .project-card-link {
+        height: 25px;
+        width: 25px;
+    }
+
+    .project-card-skills {
+        position: relative;
+        bottom: 16px; /* Position from the bottom */
+        font-size: 20px;
+        color: global.$secondary;
+    }
+}

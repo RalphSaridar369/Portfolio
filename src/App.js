@@ -7,12 +7,14 @@ import Hero from "./components/hero/Hero";
 import Services from "./components/services/Services";
 import Tech from "./components/technologies/Technologies";
 import Experience from "./components/experience/Experience";
+import Projects from "./components/projects/Projects";
 
 function App() {
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const experienceRef = useRef(null);
+  const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
   const { scrollYProgress } = useScroll();
@@ -33,6 +35,9 @@ function App() {
         break;
       case "#experience":
         experienceRef.current.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "#projects":
+        projectsRef.current.scrollIntoView({ behavior: "smooth" });
         break;
       case "#contact":
         contactRef.current.scrollIntoView({ behavior: "smooth" });
@@ -60,6 +65,9 @@ function App() {
           <div ref={experienceRef}>
             <Experience />
             <Services />
+          </div>
+          <div ref={projectsRef}>
+            <Projects />
           </div>
           <div ref={skillsRef}>
             <Tech />
