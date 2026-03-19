@@ -3,6 +3,24 @@ import OptiDist from "../../images/company/optidist.png";
 
 export const experiences = [
   {
+    title: "Back End Developer",
+    company_name: "OptiDist",
+    icon: OptiDist,
+    date: "Jul 2022 - Present",
+    points: [
+      "Led the development of backend systems for a B2B Marketplace using Node.js, TypeORM, and PostgreSQL",
+      "Utilized an open-source library to streamline development processes under the leadership role",
+      "Optimized endpoint functionalities for improved performance as a lead backend developer",
+      "Implemented Data Transfer Objects (DTOs) for enhanced data validation while leading the backend team",
+      "Collaborated closely with frontend teams to ensure seamless integration with the user interface under the lead backend developer role",
+      `Created comprehensive API documentation using Insomnia, ensuring clarity and ease of use for internal and external
+stakeholders`,
+
+      `Leveraged third-party services such as Postmark for email communication and Digital Ocean for hosting, contributing to
+the scalability and reliability of the platform.`,
+    ],
+  },
+  {
     title: "Front End Developer",
     company_name: "Globalistic",
     icon: Globalistic,
@@ -21,22 +39,5 @@ export const experiences = [
       `Optimized the application and resolved bugs to ensure smooth functionality`,
     ],
   },
-  {
-    title: "Back End Developer",
-    company_name: "OptiDist",
-    icon: OptiDist,
-    date: "Jul 2022 - Aug 2024",
-    points: [
-      "Led the development of backend systems for a B2B Marketplace using Node.js, TypeORM, and PostgreSQL",
-      "Utilized an open-source library to streamline development processes under the leadership role",
-      "Optimized endpoint functionalities for improved performance as a lead backend developer",
-      "Implemented Data Transfer Objects (DTOs) for enhanced data validation while leading the backend team",
-      "Collaborated closely with frontend teams to ensure seamless integration with the user interface under the lead backend developer role",
-      `Created comprehensive API documentation using Insomnia, ensuring clarity and ease of use for internal and external
-stakeholders`,
-
-      `Leveraged third-party services such as Postmark for email communication and Digital Ocean for hosting, contributing to
-the scalability and reliability of the platform.`,
-    ],
-  },
+  
 ];
