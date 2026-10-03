@@ -1,0 +1,81 @@
+/* Design tokens — ported from the Ralph Saridar design system (_ds/…/tokens/*.css) */
+:root {
+  /* Navy — heritage primary #00172d */
+  --navy-950:#000E1C;--navy-900:#00172D;--navy-850:#041E38;--navy-800:#082643;--navy-700:#0F3354;--navy-600:#1C4669;--navy-500:#34607F;--navy-400:#5E7F9C;--navy-300:#8FA6BD;--navy-200:#C3D1DE;--navy-100:#E4EBF2;
+  /* Ember — heritage secondary #e47736 */
+  --ember-700:#A84E1A;--ember-600:#C9612A;--ember-500:#E47736;--ember-400:#F08E52;--ember-300:#F6AF80;--ember-200:#F9CDAE;--ember-100:#FCEADC;
+  /* Paper */
+  --paper-100:#FBFCF8;--paper-200:#F3F2EB;--paper-300:#E6E4DA;
+  --white:#FFFFFF;--black:#000000;
+  /* Semantic */
+  --green-500:#2FB67C;--green-100:#DDF4EA;--amber-500:#E8B931;--amber-100:#FBF1D2;--red-500:#E5484D;--red-100:#FCE3E4;--sky-500:#4DA3FF;--sky-100:#DEEEFF;
+
+  /* Aliases — dark (default) */
+  --surface-page:var(--navy-900);--surface-sunken:var(--navy-950);--surface-raised:var(--navy-850);--surface-card:var(--navy-800);--surface-card-hover:var(--navy-700);--surface-inverse:var(--paper-100);
+  --text-strong:var(--white);--text-body:var(--navy-100);--text-muted:var(--navy-300);--text-subtle:var(--navy-400);--text-inverse:var(--navy-900);--text-inverse-muted:var(--navy-500);
+  --accent:var(--ember-500);--accent-hover:var(--ember-400);--accent-press:var(--ember-600);--accent-soft:rgba(228,119,54,.14);--on-accent:var(--white);
+  --border-subtle:rgba(195,209,222,.10);--border-default:rgba(195,209,222,.18);--border-strong:rgba(195,209,222,.34);--border-inverse:var(--paper-300);
+  --focus-ring:0 0 0 3px rgba(228,119,54,.45);
+  --status-available:var(--green-500);--status-busy:var(--amber-500);--status-error:var(--red-500);--status-info:var(--sky-500);
+
+  /* Typography — font families come from next/font variables set in app/layout.tsx */
+  --font-display:var(--font-bricolage),'Raleway',system-ui,sans-serif;
+  --font-body:var(--font-instrument),'Raleway',system-ui,sans-serif;
+  --font-mono:var(--font-jetbrains),ui-monospace,SFMono-Regular,Menlo,monospace;
+  --fw-regular:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;
+  --fs-12:12px;--fs-14:14px;--fs-16:16px;--fs-18:18px;--fs-20:20px;--fs-24:24px;--fs-32:32px;--fs-44:44px;--fs-60:60px;--fs-80:80px;
+  --lh-tight:1.02;--lh-snug:1.15;--lh-normal:1.5;--lh-relaxed:1.65;
+  --tracking-tight:-0.03em;--tracking-snug:-0.015em;--tracking-normal:0;--tracking-wide:0.08em;
+  --type-display-size:clamp(44px,7vw,80px);--type-h1-size:var(--fs-60);--type-h2-size:var(--fs-44);--type-h3-size:var(--fs-24);--type-h4-size:var(--fs-20);--type-body-size:var(--fs-18);--type-small-size:var(--fs-14);--type-eyebrow-size:var(--fs-12);
+
+  /* Spacing */
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:50px;--space-16:64px;--space-20:80px;--space-30:120px;
+  --gutter-page:50px;--gutter-page-mobile:20px;--section-gap:120px;--content-max:1200px;--measure:62ch;
+
+  /* Effects */
+  --radius-xs:4px;--radius-sm:8px;--radius-md:12px;--radius-lg:20px;--radius-xl:28px;--radius-pill:999px;
+  --border-width:1px;
+  --shadow-sm:0 1px 2px rgba(0,8,18,.4);
+  --shadow-card:0 1px 0 rgba(255,255,255,.04) inset,0 24px 48px -24px rgba(0,8,18,.7);
+  --shadow-pop:0 30px 60px -20px rgba(0,8,18,.8),0 0 0 1px var(--border-default);
+  --shadow-light-card:0 1px 2px rgba(0,23,45,.06),0 16px 32px -16px rgba(0,23,45,.18);
+  --glow-accent:0 0 0 1px rgba(228,119,54,.5),0 10px 30px -8px rgba(228,119,54,.45);
+  --ease-out:cubic-bezier(.2,.7,.2,1);
+  --ease-in-out:cubic-bezier(.65,0,.35,1);
+  --dur-fast:150ms;--dur-base:300ms;--dur-slow:500ms;
+  --progress-height:2.5px;
+  --blur-nav:saturate(140%) blur(14px);
+}
+
+@media (max-width: 767px) {
+  :root { --gutter-page: var(--gutter-page-mobile); }
+}
+
+/* Base */
+html{-webkit-font-smoothing:antialiased;scroll-behavior:auto}
+body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--font-body);font-size:var(--type-body-size);line-height:var(--lh-relaxed)}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--text-strong);font-weight:var(--fw-semibold);letter-spacing:var(--tracking-snug);line-height:var(--lh-snug);margin:0;text-wrap:balance}
+p{text-wrap:pretty}
+a{color:var(--text-body);text-decoration:none;transition:color var(--dur-fast) var(--ease-out)}
+a:hover{color:var(--accent)}
+::selection{background:var(--ember-500);color:var(--navy-900)}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--navy-950)}::-webkit-scrollbar-thumb{background:var(--navy-600);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:var(--ember-500)}
+
+/* Page helpers */
+.eyebrow{font:500 12px/1 var(--font-mono);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-subtle)}
+.eyebrow-accent{font:500 12px/1 var(--font-mono);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--accent)}
+.section-sunken{background:var(--surface-sunken);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)}
+.container{max-width:var(--content-max);margin:0 auto;padding:clamp(64px,8vw,96px) var(--gutter-page);box-sizing:border-box}
+.card{background:var(--surface-card);border:1px solid var(--border-subtle);box-shadow:var(--shadow-card)}
+.company-pill{height:40px;padding:0 14px;border-radius:10px;background:var(--paper-100);display:flex;align-items:center;gap:8px;color:var(--navy-900);font:600 14px var(--font-body)}
+.overlay{position:fixed;inset:0;z-index:200;background:rgba(0,8,18,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:grid;place-items:center;padding:clamp(12px,3vw,24px)}
+.dialog{max-height:92vh;overflow:auto;border-radius:var(--radius-xl);background:var(--surface-raised);border:1px solid var(--border-default);box-shadow:var(--shadow-pop);box-sizing:border-box}
+.divided{display:grid;gap:14px;padding-top:24px;border-top:1px solid var(--border-subtle)}
+
+/* Desktop vs mobile header */
+.nav-desktop{display:block}
+.nav-mobile{display:none}
+@media (max-width: 767px) {
+  .nav-desktop{display:none}
+  .nav-mobile{display:block}
+}
