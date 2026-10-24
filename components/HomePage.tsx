@@ -212,7 +212,7 @@ export default function HomePage({ availability = 'available' }: { availability?
             Web and mobile products, built end to end<span style={{ color: 'var(--accent)' }}>.</span>
           </h1>
           <p style={{ margin: 0, fontSize: 20, lineHeight: 1.6, color: 'var(--text-muted)', maxWidth: '52ch', textWrap: 'pretty' }}>
-            I&apos;m Ralph Saridar, a full-stack developer working remotely from Awkar, Lebanon. I take your product from first scope to a launched web or mobile app, and I stay on after launch.
+            I&apos;m Ralph Saridar, a full-stack developer working remotely from Lebanon. I take your product from first scope to a launched web or mobile app, and I stay on after launch.
           </p>
           <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
             {HERO_TAGS.map((t) => (
@@ -434,7 +434,7 @@ export default function HomePage({ availability = 'available' }: { availability?
       </section>
 
       <div style={{ background: 'var(--surface-sunken)', borderTop: '1px solid var(--border-subtle)' }}>
-        <Footer name="Ralph Saridar" email={c.email} location="Awkar, Lebanon" socials={socials} />
+        <Footer name="Ralph Saridar" email={c.email} location="Lebanon" socials={socials} />
       </div>
 
       {modal && <ProjectModal p={modal} onClose={closeModal} onHire={hireFromModal} />}

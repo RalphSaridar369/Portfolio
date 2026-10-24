@@ -8,7 +8,7 @@ const jetbrains = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500'], v
 
 export const metadata: Metadata = {
   title: 'Ralph Saridar · Freelance full-stack developer',
-  description: 'Web and mobile products, built end to end. Freelance full-stack developer working remotely from Awkar, Lebanon.',
+  description: 'Web and mobile products, built end to end. Freelance full-stack developer working remotely from Lebanon.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

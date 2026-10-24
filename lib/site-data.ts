@@ -18,7 +18,7 @@ export type SiteData = {
 };
 
 export const site: SiteData = {
-  contact: { email: 'ralphsaridar@hotmail.com', phone: '+961 70 386 361', location: 'Awkar, Lebanon · works remotely', github: 'https://github.com/RalphSaridar369', githubLabel: 'github.com/RalphSaridar369', linkedin: 'https://www.linkedin.com/in/ralph-saridar-7278021b3/', linkedinLabel: 'linkedin.com/in/ralph-saridar' },
+  contact: { email: 'ralphsaridar@hotmail.com', phone: '+961 70 386 361', location: 'Lebanon · works remotely', github: 'https://github.com/RalphSaridar369', githubLabel: 'github.com/RalphSaridar369', linkedin: 'https://www.linkedin.com/in/ralph-saridar-7278021b3/', linkedinLabel: 'linkedin.com/in/ralph-saridar' },
   links: [{ id: 'services', label: 'Services' }, { id: 'work', label: 'Work' }, { id: 'process', label: 'Process' }, { id: 'experience', label: 'Experience' }, { id: 'faq', label: 'FAQ' }, { id: 'contact', label: 'Contact' }],
   services: [
     { id: 'mvp', icon: 'rocket', title: 'MVPs & full-stack apps', featured: true, description: 'From a blank repo to a product your first users can log into. Database, API and interface, built by one person who owns all of it.', deliverables: ['Auth, roles and admin panel', 'Deployed on DigitalOcean with CI', 'Handover docs your next hire can read'], stack: ['React', 'Node.js', 'PostgreSQL'], timeline: '6–10 weeks', fit: 'You have an idea and a first set of users, and need a working product to put in front of them.', more: ['Scoped feature list and data model', 'REST API with documentation', 'React web app or React Native app', 'Staging and production environments', 'Up to 3 months of fixes after launch'] },
